@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>API Sample</title>
+      <script type="module" crossorigin src="../../assets/DHrooxvSs7Ne.js"></script>
+      <link rel="modulepreload" crossorigin href="../../assets/CHZyiO-hoVbm.js">
+      <link rel="modulepreload" crossorigin href="../../assets/vOBnYnib6xFk.js">
+      <link rel="modulepreload" crossorigin href="../../assets/Ckh078_tvAp5.js">
+      <link rel="modulepreload" crossorigin href="../../assets/CVj37m9HdTdD.js">
+      <link rel="modulepreload" crossorigin href="../../assets/3KmlZorKJeDR.js">
+      <link rel="modulepreload" crossorigin href="../../assets/Cd0iSeSdXhWG.js">
+    </head>
+    <body>
+        <api-app id="app"></api-app>
+    </body>
+    <script>
+        document.getElementById("app").addEventListener("my-custom-event", (event) => {
+            console.log("Got event from app:", event);
+        });
+
+        customElements.whenDefined("api-app").then(() => {
+            const app = document.getElementById("app");
+            app.when().then((api) => {
+                let count = 0;
+                setInterval(() => {
+                    api.changeText(`Text has been changed ${++count} times.`);
+                }, 1000);
+            });
+        });
+    </script>
+</html>
