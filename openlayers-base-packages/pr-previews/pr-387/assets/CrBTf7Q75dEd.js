@@ -1,1 +1,0 @@
-import{h as c,Q as o,o as i,n as r,j as x,g as l,l as m}from"./DD6TXFhYmIbq.js";const g=c(function(a,t){const s=o("Text",a),{className:f,align:d,decoration:h,casing:u,...e}=i(a),n=r({textAlign:a.align,textDecoration:a.decoration,textTransform:a.casing});return x.jsx(l.p,{ref:t,className:m("chakra-text",a.className),...n,...e,__css:s})});g.displayName="Text";export{g as T};
