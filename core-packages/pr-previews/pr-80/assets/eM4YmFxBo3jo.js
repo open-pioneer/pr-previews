@@ -1,0 +1,1 @@
+import{r as o,Z as r,j as n,v as i,x as l}from"./CanQ8QegSz5g.js";const{useRecipeResult:x}=r({key:"icon"}),m=o.forwardRef(function(s,e){const{styles:a,className:c,props:t}=x({asChild:!s.as,...s});return n.jsx(i.svg,{ref:e,focusable:!1,"aria-hidden":"true",...t,css:[a,s.css],className:l(c,s.className)})});export{m as I};
