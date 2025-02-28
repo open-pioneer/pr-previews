@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>API Sample</title>
+      <script type="module" crossorigin src="../../assets/Db00aQ7vUUYB.js"></script>
+      <link rel="modulepreload" crossorigin href="../../assets/Dw_eytBrM_9q.js">
+      <link rel="modulepreload" crossorigin href="../../assets/BEVCu0RCfHsB.js">
+      <link rel="modulepreload" crossorigin href="../../assets/DZfloXhQuMFx.js">
+      <link rel="modulepreload" crossorigin href="../../assets/ssst2_sasyYl.js">
+      <link rel="modulepreload" crossorigin href="../../assets/4gVLBtoawZoZ.js">
+    </head>
+    <body>
+        <api-app id="app"></api-app>
+    </body>
+    <script>
+        document.getElementById("app").addEventListener("my-custom-event", (event) => {
+            console.log("Got event from app:", event);
+        });
+
+        customElements.whenDefined("api-app").then(() => {
+            const app = document.getElementById("app");
+            app.when().then((api) => {
+                let count = 0;
+                setInterval(() => {
+                    api.changeText(`Text has been changed ${++count} times.`);
+                }, 1000);
+            });
+        });
+    </script>
+</html>
